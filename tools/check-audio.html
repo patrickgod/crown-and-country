@@ -6,7 +6,7 @@ const save=(name,data)=>fetch('/save?name='+name,{method:'POST',body:data});
 try{
  await audio.unlock();
  if(audio.ctx.state!=='running'||audio.failures.length)throw Error('Audio startup or decoding failed: '+JSON.stringify({state:audio.ctx?.state,failures:audio.failures,status:audio.status}));
- checks.push({check:'all six MP3 assets decode in a real AudioContext',passed:Object.keys(audio.buffers).length===6,durations:Object.fromEntries(Object.entries(audio.buffers).map(([k,v])=>[k,v.duration]))});
+ checks.push({check:'all current MP3 assets decode in a real AudioContext',passed:Object.keys(audio.buffers).length===Object.keys(AUDIO_FILES).length,durations:Object.fromEntries(Object.entries(audio.buffers).map(([k,v])=>[k,v.duration]))});
  const source=audio.musicSource;
  await audio.unlock();checks.push({check:'single looping music source',passed:audio.musicSource===source&&source.loop});
  audio.set({muted:true});await wait(700);checks.push({check:'mute approaches silence',passed:audio.master.gain.value<.001});
@@ -18,7 +18,7 @@ try{
  recorder.ondataavailable=e=>{if(e.data.size)chunks.push(e.data);};
  const stopped=new Promise(resolve=>recorder.onstop=resolve);recorder.start();
  const events=[];
- for(const cue of ['claim','place','rotate','invalid','finish']){await wait(3000);events.push({cue,atSeconds:events.length*3+3});await audio.play(cue);}
+ for(const cue of ['claim','place','rotate','invalid','water','water','forest','forest','wheat','grass','swamp','mine','finish']){await wait(3000);events.push({cue,atSeconds:events.length*3+3});if(['water','forest','wheat','grass','swamp','mine'].includes(cue))await audio.placement({halves:[{type:cue},{type:cue}]});else await audio.play(cue);}
  await wait(4000);recorder.stop();await stopped;audio.master.disconnect(output);output.stream.getTracks().forEach(t=>t.stop());
  await save('game-audio-showcase.webm',new Blob(chunks,{type:'audio/webm'}));
  await audio.ctx.close();

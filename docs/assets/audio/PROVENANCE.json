@@ -3,7 +3,7 @@
   "project": "Crown & Country",
   "title": "Meadow Light",
   "provider": "ElevenLabs",
-  "notes": "Original generated instrumental and game cues. Credentials are not part of this project. Music: 75-second source, 3-second wrap crossfade, loudness target -23 LUFS, MP3 160 kbps. Effects: high-pass at 80 Hz, peak limiter at -6 dBFS, short edge fades, MP3 128 kbps.",
+  "notes": "Original generated instrumental. Music: 75-second source, 3-second wrap crossfade, loudness target -23 LUFS, MP3 160 kbps. Current sound effects are documented in SOFT-SFX-PROVENANCE.json. Credentials are not part of this project.",
   "tracks": [
     {
       "name": "meadow-light",
@@ -18,81 +18,6 @@
         "model_id": "music_v2"
       },
       "file": "meadow-light.mp3"
-    },
-    {
-      "name": "claim",
-      "provider": "ElevenLabs",
-      "model": "eleven_text_to_sound_v2",
-      "bytes": 8821,
-      "songId": null,
-      "request": {
-        "text": "One very soft wooden game token being picked up from a felt tabletop. A tiny dry warm wood tick and short felt brush. Intimate, gentle, rounded, no harsh high frequencies, no music, no voices, no background. Single short event.",
-        "duration_seconds": 0.5,
-        "model_id": "eleven_text_to_sound_v2",
-        "prompt_influence": 0.65,
-        "loop": false
-      },
-      "file": "claim.mp3"
-    },
-    {
-      "name": "place",
-      "provider": "ElevenLabs",
-      "model": "eleven_text_to_sound_v2",
-      "bytes": 10493,
-      "songId": null,
-      "request": {
-        "text": "One small wooden domino gently set down on a soft felt game table. A satisfying muted warm woody tok with a tiny low resonance. Quiet tactile board game piece, no slam, no ringing, no music or background, single short event.",
-        "duration_seconds": 0.6,
-        "model_id": "eleven_text_to_sound_v2",
-        "prompt_influence": 0.65,
-        "loop": false
-      },
-      "file": "place.mp3"
-    },
-    {
-      "name": "rotate",
-      "provider": "ElevenLabs",
-      "model": "eleven_text_to_sound_v2",
-      "bytes": 8821,
-      "songId": null,
-      "request": {
-        "text": "One tiny soft dry wooden tile turn, light short felt swish ending in a delicate rounded wooden click. Very subtle board game interface sound, no sharp frequencies, no music, no background.",
-        "duration_seconds": 0.5,
-        "model_id": "eleven_text_to_sound_v2",
-        "prompt_influence": 0.65,
-        "loop": false
-      },
-      "file": "rotate.mp3"
-    },
-    {
-      "name": "invalid",
-      "provider": "ElevenLabs",
-      "model": "eleven_text_to_sound_v2",
-      "bytes": 10493,
-      "songId": null,
-      "request": {
-        "text": "A small wooden game tile softly sliding back onto felt with a muted low tap. A gentle non alarming return sound. No buzzer, no harsh beep, no music, no voices. Single short event.",
-        "duration_seconds": 0.6,
-        "model_id": "eleven_text_to_sound_v2",
-        "prompt_influence": 0.65,
-        "loop": false
-      },
-      "file": "invalid.mp3"
-    },
-    {
-      "name": "finish",
-      "provider": "ElevenLabs",
-      "model": "eleven_text_to_sound_v2",
-      "bytes": 48945,
-      "songId": null,
-      "request": {
-        "text": "A quiet warm three-note acoustic harp and soft felt piano flourish resolving to a gentle major chord. A peaceful small kingdom completed, understated satisfaction. Soft rounded attack and natural decay to silence. No fanfare, no brass, no drums, no bright bells, no vocals.",
-        "duration_seconds": 3,
-        "model_id": "eleven_text_to_sound_v2",
-        "prompt_influence": 0.65,
-        "loop": false
-      },
-      "file": "finish.mp3"
     }
   ]
 }

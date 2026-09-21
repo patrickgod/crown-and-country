@@ -1,7 +1,8 @@
 import http from 'node:http';
+import {AUDIO_FILES} from '../audio.js';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
-const out='artifacts/audio/2026-09-21-calm-tabletop/runtime';await mkdir(out,{recursive:true});
-const allowed=new Set(['audio.js','tools/check-audio.html',...['meadow-light','claim','place','rotate','invalid','finish'].map(n=>'assets/audio/'+n+'.mp3')]);
+const out='artifacts/audio/2026-09-21-soft-terrain/runtime';await mkdir(out,{recursive:true});
+const allowed=new Set(['audio.js','tools/check-audio.html',...Object.values(AUDIO_FILES)]);
 const server=http.createServer(async(req,res)=>{try{
  const u=new URL(req.url,'http://127.0.0.1:5175');
  if(req.method==='POST'&&u.pathname==='/save'&&req.headers.origin==='http://127.0.0.1:5175'){

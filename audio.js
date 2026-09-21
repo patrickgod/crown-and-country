@@ -1,16 +1,25 @@
-export const AUDIO_FILES = {
- music:'assets/audio/meadow-light.mp3',claim:'assets/audio/claim.mp3',
- place:'assets/audio/place.mp3',rotate:'assets/audio/rotate.mp3',
- invalid:'assets/audio/invalid.mp3',finish:'assets/audio/finish.mp3'
+export const SOUND_BANKS = {
+ claim:['claim-1','claim-2'],place:['place-1','place-2'],
+ rotate:['rotate-1','rotate-2'],invalid:['invalid-1','invalid-2'],finish:['finish-soft'],
+ ...Object.fromEntries(['water','forest','wheat','grass','swamp','mine'].map(t=>[t,[1,2,3].map(i=>t+'-'+i)]))
 };
+export const AUDIO_FILES = {music:'assets/audio/meadow-light.mp3',
+ ...Object.fromEntries(Object.values(SOUND_BANKS).flat().map(n=>[n,'assets/audio/'+n+'.mp3']))};
+export function placementTerrain(domino){
+ const [a,b]=domino?.halves||[];
+ if(!a||!b)return null;
+ if(a.type===b.type&&SOUND_BANKS[a.type])return a.type;
+ // The standard deck has no double mines; mine-bearing tiles get the cavern accent.
+ return a.type==='mine'||b.type==='mine'?'mine':null;
+}
 export function sanitizeSettings(value={}) {
  const volume=(n,fallback)=>Number.isFinite(n)?Math.max(0,Math.min(1,n)):fallback;
  return {muted:value?.muted===true,music:volume(value?.music,.23),effects:volume(value?.effects,.5)};
 }
 export class GameAudio {
- constructor({Context=globalThis.AudioContext||globalThis.webkitAudioContext,fetcher=globalThis.fetch,storage,doc=globalThis.document}={}) {
+ constructor({Context=globalThis.AudioContext||globalThis.webkitAudioContext,fetcher=globalThis.fetch,storage,doc=globalThis.document,random=Math.random}={}) {
   try{storage??=globalThis.localStorage;}catch{}
-  this.Context=Context;this.fetcher=fetcher;this.storage=storage;this.doc=doc;
+  this.random=random;this.lastVariant={};this.Context=Context;this.fetcher=fetcher;this.storage=storage;this.doc=doc;
   this.buffers={};this.voices=new Set();this.failures=[];this.status='Starts after your first tap.';this.started=false;
   try{this.settings=sanitizeSettings(JSON.parse(storage?.getItem('crown-country-audio')||'{}'));}catch{this.settings=sanitizeSettings();}
   doc?.addEventListener('visibilitychange',()=>this.visibility());
@@ -41,7 +50,7 @@ export class GameAudio {
     this.buffers[name]=await this.ctx.decodeAudioData(await response.arrayBuffer());
    }catch{this.failures.push(name);}
   }));
-  this.status=this.failures.length?'Some audio could not load. You can retry.':'Calm music & gentle tabletop sounds.';
+  this.status=this.failures.length?'Some audio could not load. You can retry.':'Soft cards & little sounds of nature.';
  }
  startMusic(){
   if(this.musicSource||!this.buffers.music||this.doc?.hidden)return;
@@ -58,12 +67,35 @@ export class GameAudio {
   this.settings=sanitizeSettings({...this.settings,...values});this.apply();
   try{this.storage?.setItem('crown-country-audio',JSON.stringify(this.settings));}catch{}
  }
+ choose(name){
+  const bank=SOUND_BANKS[name];
+  if(!bank)return null;
+  const choices=bank.filter(n=>n!==this.lastVariant[name]);
+  const pool=choices.length?choices:bank;
+  const selected=pool[Math.min(pool.length-1,Math.floor(this.random()*pool.length))];
+  this.lastVariant[name]=selected;return selected;
+ }
+ async placement(domino){
+  const terrain=placementTerrain(domino);
+  await Promise.all([this.play('place'),terrain?this.play(terrain):Promise.resolve()]);
+ }
  async play(name){
   const requested=Date.now();await this.unlock();
-  if(!this.ctx||this.ctx.state!=='running'||this.doc?.hidden||this.settings.muted||this.settings.effects===0||Date.now()-requested>700||!this.buffers[name])return;
-  if(this.voices.size>=6){const oldest=this.voices.values().next().value;oldest.stop();oldest.disconnect();this.voices.delete(oldest);}
-  const source=this.ctx.createBufferSource();source.buffer=this.buffers[name];source.connect(this.effectsGain);this.voices.add(source);
-  source.onended=()=>{source.disconnect();this.voices.delete(source);};source.start();
+  if(!this.ctx||this.ctx.state!=='running'||this.doc?.hidden||this.settings.muted||this.settings.effects===0||Date.now()-requested>700)return;
+  const variant=this.choose(name);if(!variant||!this.buffers[variant])return;
+  const ambient=['water','forest','wheat','grass','swamp','mine'].includes(name);
+  if(ambient&&this.ambience){
+   const old=this.ambience;
+   old.voiceGain.gain.setTargetAtTime(0,this.ctx.currentTime,.04);
+   old.stop(this.ctx.currentTime+.2);
+  }
+  if(this.voices.size>=6){const oldest=this.voices.values().next().value;oldest.stop();oldest.disconnect();oldest.voiceGain.disconnect();this.voices.delete(oldest);}
+  const source=this.ctx.createBufferSource(),gain=this.ctx.createGain();
+  source.buffer=this.buffers[variant];source.voiceGain=gain;source.variant=variant;
+  gain.gain.value=ambient?.65:name==='rotate'||name==='invalid'?.65:1;
+  source.connect(gain);gain.connect(this.effectsGain);this.voices.add(source);
+  if(ambient)this.ambience=source;
+  source.onended=()=>{source.disconnect();gain.disconnect();this.voices.delete(source);if(this.ambience===source)this.ambience=null;};source.start();
  }
  async visibility(){
   if(!this.ctx||!this.started)return;

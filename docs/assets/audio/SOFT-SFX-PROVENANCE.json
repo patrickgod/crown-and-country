@@ -1,0 +1,411 @@
+{
+  "date": "2026-09-21",
+  "purpose": "Soft card foley and varied quiet terrain accents",
+  "assets": [
+    {
+      "name": "claim-1",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 12164,
+      "songId": null,
+      "request": {
+        "text": "Quiet close-up natural foley for a calm board game. Soft rounded texture, no impact, no click, no thump, no squeak, no tonal UI beep, no music, no speech, no background noise. A single paper playing card gently drawn from a deck, a delicate short papery whisper. Natural take 1, a single understated gesture.",
+        "duration_seconds": 0.7,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-3dB,afade=t=in:d=0.025,afade=t=out:st=0.631429:d=0.06"
+    },
+    {
+      "name": "claim-2",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 12164,
+      "songId": null,
+      "request": {
+        "text": "Quiet close-up natural foley for a calm board game. Soft rounded texture, no impact, no click, no thump, no squeak, no tonal UI beep, no music, no speech, no background noise. A single paper playing card gently drawn from a deck, a delicate short papery whisper. Natural take 2, a single understated gesture.",
+        "duration_seconds": 0.7,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-3dB,afade=t=in:d=0.025,afade=t=out:st=0.631429:d=0.06"
+    },
+    {
+      "name": "finish-soft",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 33062,
+      "songId": null,
+      "request": {
+        "text": "A very soft short warm felt piano and airy harp two-note resolution, peaceful understated board game completion, gentle low register, no bells, no fanfare, no percussion, no sharp attacks, smooth decay to silence.",
+        "duration_seconds": 2,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-3dB,afade=t=in:d=0.025,afade=t=out:st=1.937551:d=0.06"
+    },
+    {
+      "name": "forest-1",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "A light breeze softly rustling broad leaves in a quiet forest. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "forest-2",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "Soft woodland leaves with one faint distant low bird coo. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "forest-3",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "Gentle pine needles rustling in a very light woodland breeze. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "grass-1",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "A light breeze softly brushing long meadow grass. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "grass-2",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "Soft meadow grass rustle and one very distant small bird. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "grass-3",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "A delicate breeze through a quiet grassy hillside. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "invalid-1",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 12164,
+      "songId": null,
+      "request": {
+        "text": "Quiet close-up natural foley for a calm board game. Soft rounded texture, no impact, no click, no thump, no squeak, no tonal UI beep, no music, no speech, no background noise. One paper playing card quietly slid back across felt, a feather-light paper swish. Natural take 1, a single understated gesture.",
+        "duration_seconds": 0.7,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-3dB,afade=t=in:d=0.025,afade=t=out:st=0.631429:d=0.06"
+    },
+    {
+      "name": "invalid-2",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 12164,
+      "songId": null,
+      "request": {
+        "text": "Quiet close-up natural foley for a calm board game. Soft rounded texture, no impact, no click, no thump, no squeak, no tonal UI beep, no music, no speech, no background noise. One paper playing card quietly slid back across felt, a feather-light paper swish. Natural take 2, a single understated gesture.",
+        "duration_seconds": 0.7,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-3dB,afade=t=in:d=0.025,afade=t=out:st=0.631429:d=0.06"
+    },
+    {
+      "name": "mine-1",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "One very quiet water droplet in a warm small stone cavern, short soft echo. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "mine-2",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "A faint airy breeze inside a peaceful stone grotto. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "mine-3",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "A delicate tiny trickle of water over smooth cave stone. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "place-1",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 12164,
+      "songId": null,
+      "request": {
+        "text": "Quiet close-up natural foley for a calm board game. Soft rounded texture, no impact, no click, no thump, no squeak, no tonal UI beep, no music, no speech, no background noise. One paper playing card gently laid and slid onto a felt tabletop, a soft airy paper brush. Natural take 1, a single understated gesture.",
+        "duration_seconds": 0.7,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-3dB,afade=t=in:d=0.025,afade=t=out:st=0.631429:d=0.06"
+    },
+    {
+      "name": "place-2",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 12164,
+      "songId": null,
+      "request": {
+        "text": "Quiet close-up natural foley for a calm board game. Soft rounded texture, no impact, no click, no thump, no squeak, no tonal UI beep, no music, no speech, no background noise. One paper playing card gently laid and slid onto a felt tabletop, a soft airy paper brush. Natural take 2, a single understated gesture.",
+        "duration_seconds": 0.7,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-3dB,afade=t=in:d=0.025,afade=t=out:st=0.631429:d=0.06"
+    },
+    {
+      "name": "rotate-1",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 12164,
+      "songId": null,
+      "request": {
+        "text": "Quiet close-up natural foley for a calm board game. Soft rounded texture, no impact, no click, no thump, no squeak, no tonal UI beep, no music, no speech, no background noise. One paper playing card gently turned on felt, a very brief soft papery rub. Natural take 1, a single understated gesture.",
+        "duration_seconds": 0.7,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-3dB,afade=t=in:d=0.025,afade=t=out:st=0.631429:d=0.06"
+    },
+    {
+      "name": "rotate-2",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 12164,
+      "songId": null,
+      "request": {
+        "text": "Quiet close-up natural foley for a calm board game. Soft rounded texture, no impact, no click, no thump, no squeak, no tonal UI beep, no music, no speech, no background noise. One paper playing card gently turned on felt, a very brief soft papery rub. Natural take 2, a single understated gesture.",
+        "duration_seconds": 0.7,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-3dB,afade=t=in:d=0.025,afade=t=out:st=0.631429:d=0.06"
+    },
+    {
+      "name": "swamp-1",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "Gentle still marsh water softly moving among reeds. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "swamp-2",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "A faint soft water bubble and delicate wetland reed rustle. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "swamp-3",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "A calm breeze lightly brushing waterside reeds. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "water-1",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "Small gentle lake wave softly washing a sandy shore. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "water-2",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "Tiny soft ripples lapping against a lakeside stone. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "water-3",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "A delicate small wave spreading over smooth lakeside pebbles. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "wheat-1",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "A light breeze quietly brushing ripe wheat stalks. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "wheat-2",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "A gentle dry rustle through a golden grain field. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    },
+    {
+      "name": "wheat-3",
+      "provider": "ElevenLabs",
+      "model": "eleven_text_to_sound_v2",
+      "bytes": 40586,
+      "songId": null,
+      "request": {
+        "text": "Soft swaying barley heads in a calm summer breeze. A tiny peaceful natural ambience vignette, very quiet distant perspective, smooth gentle onset and fade out, no loud birds, no sharp chirps, no sudden sounds, no wind rumble, no music or voices.",
+        "duration_seconds": 2.5,
+        "model_id": "eleven_text_to_sound_v2",
+        "prompt_influence": 0.65,
+        "loop": false
+      },
+      "mastering": "highpass=f=140,lowpass=f=5500,loudnorm=I=-29:TP=-9:LRA=5,volume=-6dB,afade=t=in:d=0.25,afade=t=out:st=2.117755:d=0.35"
+    }
+  ]
+}

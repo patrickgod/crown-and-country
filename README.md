@@ -22,3 +22,5 @@ The standing workflow is in AGENTS.md. Local notes live in devlogs/, indexed by 
 
 ## Audio
 Original ElevenLabs instrumental music and five quiet tabletop effects. Use the music-note button for separate music/effects levels and master mute. Audio starts after a gesture, fades level changes, and suspends while the tab is hidden. Preferences save locally. All audio is served as static assets; no API key or generation API is used by players. See assets/audio/PROVENANCE.json for prompts and production details.
+
+Sound effects use soft card foley with alternate takes. Double terrain tiles add one of three quiet nature accents: waves, woodland, grain, meadow or reeds. Mine-bearing tiles use cavern ambience because the standard deck contains no double mines. Variants avoid immediate repeats; nature accents crossfade instead of stacking.
