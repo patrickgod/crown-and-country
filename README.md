@@ -19,3 +19,6 @@ Drag the domino in your hand onto your active kingdom. Gold previews are legal; 
 
 ## Development evidence
 The standing workflow is in AGENTS.md. Local notes live in devlogs/, indexed by development/README.md; screenshots and raw recordings live in artifacts/captures/. These local folders are excluded from GitHub and Pages. Run node tools/capture-server.mjs and open its printed URL to capture a deterministic staged engine replay without touching saved games. This utility is not included in the Pages build.
+
+## Audio
+Original ElevenLabs instrumental music and five quiet tabletop effects. Use the music-note button for separate music/effects levels and master mute. Audio starts after a gesture, fades level changes, and suspends while the tab is hidden. Preferences save locally. All audio is served as static assets; no API key or generation API is used by players. See assets/audio/PROVENANCE.json for prompts and production details.
