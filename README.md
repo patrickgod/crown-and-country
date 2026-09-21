@@ -13,3 +13,9 @@ Each 9×9 planning area allows a 5×5 kingdom to grow in any direction around it
 Rules reference: https://playheavenlygames.com/wp-content/uploads/2023/05/ed70e-kingdomino_rules_us_2nd_edition.pdf
 
 This is an unofficial prototype, with no original game illustrations or branding. The custom frontend and game engine are separate ES modules. Network multiplayer and AI opponents are outside this first demo.
+
+## Drag-and-drop
+Drag the domino in your hand onto your active kingdom. Gold previews are legal; red previews are invalid. Release to place immediately. Invalid drops return to your hand. Rotate before dragging on touch devices, or press R during a mouse drag. Escape cancels. Tap/confirm remains available.
+
+## Development evidence
+The standing workflow is in AGENTS.md. Local notes live in devlogs/, indexed by development/README.md; screenshots and raw recordings live in artifacts/captures/. These local folders are excluded from GitHub and Pages. Run node tools/capture-server.mjs and open its printed URL to capture a deterministic staged engine replay without touching saved games. This utility is not included in the Pages build.

@@ -3,3 +3,7 @@ node_modules/
 .env
 .env.*
 .DS_Store
+
+artifacts/
+devlogs/
+development/
